@@ -18,7 +18,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .layui-btn, .layui-edge, .layui-inline, img {
-    vertical-align: middle
+    vertical-align: middle;
+
 }
 
 .layui-btn, .layui-disabled, .layui-icon, .layui-unselect {
@@ -71,8 +72,8 @@ pre {
 }
 
 body {
-    line-height: 24px;
-    font: 14px Helvetica Neue, Helvetica, PingFang SC, Tahoma, Arial, sans-serif
+    line-height: 20px;
+    font: 12px Helvetica Neue, Helvetica, PingFang SC, Tahoma, Arial, sans-serif
 }
 
 hr {
@@ -5024,7 +5025,7 @@ body .layui-util-face .layui-layer-content {
 
 
 p{
-    font-size: 30px;
+    font-size: 24px;
     text-align: center;
     font-family: 微软简行楷;
 }

@@ -1,197 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
-        <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
-        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
-        <script src="js/jquery.js"></script>
-        <script src="layui/layui.all.js" charset="utf-8"></script>
-        <link rel="stylesheet" href="layui/css/layui.css">
-        <style>
-            *{
-                margin: 0;
-                padding: 0;
-            }
-            html{
-                height: 100%;
-            }
-            body{
-                height: 100%;
-                margin: 0;
-                background: #E5D7CA;
-            }
-            .header{
-                width: 1400px;
-                height: 1800px;
-                text-align: center;
-                margin: auto;
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <title>WHERE COMMUNICATION GOES</title>
+    <script type="text/javascript" src="my.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="layui/layui.all.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            height: 100%;
+        }
+        body{
+            height: 100%;
+            margin: 0;
+        }
+        .hbg{
+            background: url("images/top1.png");
+            width: 100%;
+            height: 250px;
+        }
+        .con1{
+            margin-top: 100px;
+        }
+        .pic1{
+            margin-top: 100px;
+            width: 800px;
+           text-align: center;
+        }
+        .con2{
+            margin-top: 100px;
+            font-family:华文楷体;
+            font-size: 25px;
+            letter-spacing: 4px;
+            text-indent: 2em;
+            text-align: justify;
+        }
+        .pic2{
+            margin-top: 50px;
+        }
+        .con3{
+            margin-top: 100px;
+            font-family:华文楷体;
+            font-size: 22px;
+            letter-spacing: 4px;
+            text-indent: 58px;
+            text-align: justify;
 
-            }
-            #container1,#container2,#container3{
-                width: 690px;
-                height: 500px;
-            }
-            .h1{
-                width: 1400px;
-                height: 900px;
-                margin: 100px auto;
-            }
-            .con{
-                width: 1400px;
-                height: 405px;
-                margin: auto;
-            }
-            .fl{
-                float: left;
-            }
-            .h2{
-                width: 100%;
-                height: 250px;
-                line-height:26px ;
-                font-family:华文楷体;
-                font-size: 25px;
-                letter-spacing: 4px;
-                text-indent: 2em;
-            }
-            .h3{
-                width: 100%;
-                height: 350px;
-                text-align: center;
-            }
-            .h4{
-                width: 1400px;
-                height: 800px;
-                margin: auto;
-            }
-            #container4{
-                width: 1400px;
-                height: 600px;
-                margin: auto;
-            }
-            .TitleAndGender{
-                width: 1400px;
-                height:500px;
-                margin:  auto;
-            }
-
-            .h5{
-                width: 1400px;
-                margin:-100px auto;
-                height: 2100px;
-                font-family:华文楷体;
-                font-size: 25px;
-                letter-spacing: 4px;
-                text-indent: 2em;
-            }
-            .layui-carousel div img {
-                width: 332px;
-                height: 450px;
-                text-align: center;
-            }
-            .bgtop{
-                background: url("images/top.png");
-                height: 250px;
-            }
-            video{
-                margin-top: 250px;
-            }
-            .bgbo{
-                background: url("images/bot.png");
-                height:500px;
-
-            }
-
-
-
-        </style>
-    </head>
-    <body>
-        <div style="background: -webkit-linear-gradient(top,#F9F5F2,#F7F1EC,#F6F1ED,#F2EBE5,#EADED4,#E5D7CB)">
-        <div class="header">
-            <div class="bgtop">
-                <div >
-                    <video width=1400px height=600px  autoplay muted>
-                        <source src="开头.mov"  alt="Second slide" style="width: 100%;">
-                    </video>
-                </div>
-                <div class="h1">
-                    <div class="con"><br><br>
-                        <p class="change">1918年10月，中国第一个新闻学研究团体“北京大学新闻研究会”成立，</p><br>
-                        <p class="change">在中国新闻传播学科发展上具有里程碑式的意义。</p><br>
-                        <p class="change">栉风沐雨一百年，一百年德业日新，</p><br>
-                        <p class="change">新闻传播学已经从单一的新闻学方向</p><br>
-                        <p class="change">衍生出网络新媒体、计算传播学、媒介产业管理等诸多新兴方向。</p><br>
-                        <p class="change">在万物互联的智能传播时代，站在新纪元的开端展望，</p><br>
-                        <p class="change">诸多学科交汇的新闻传播学究竟将何去何从？</p>
-                    </div>
-                    <div style="width: 1400px;height: 405px;margin: 100px auto;text-align: center;">
-                        <div class="layui-carousel" id="test10">
-                            <div carousel-item="" >
-                            </div>
-                        </div>
-                        <script src="../layui/layui.all.js" charset="utf-8"></script>
-                        <script>
-                            var data = [
-                                "images/图片1.png",
-                                "images/图片2.png",
-                                "images/图片3.png",
-                                "images/图片4.png",
-                                "images/图片5.png",
-                                "images/图片6.png",
-                                "images/图片7.png",
-                            ];
-                            $(function () {
-                                var carousel;
-                                layui.use(['carousel'], function () {
-                                    carousel = layui.carousel;
-                                    // carousel.render({
-                                    //     elem: '#test10'
-                                    //     , width: '700px'
-                                    //     , height: '400px'
-                                    //     , interval: 5000
-                                    // });
-                                })
-                                $.each(data, function (index, value) {
-                                    var div = $("<div></div>").append("<img src='" + value + "'>");
-                                    $(".layui-carousel>div").append(div)
-                                })
-                                setTimeout(function (){
-                                    carousel.render({
-                                        elem: '#test10'
-                                        , width: '700px'
-                                        , height: '400px'
-                                        , interval: 2000
-                                    });
-                                },100);
-                            })
-                        </script>
-                    </div>
-                </div>
-
-
-
-            </div>
-
+        }
+        #container1,#container2,#container3{
+            width: 33%;
+            height: 400px;
+            float: left;
+        }
+        .pic3{
+            margin-top: 50px;
+        }
+        .con4{
+            margin-top: 100px;
+            font-family:华文楷体;
+            font-size: 22px;
+            letter-spacing: 4px;
+            text-indent: 58px;
+            text-align: justify;
+        }
+        .pic4{
+            margin-top: 50px;
+            text-align: center;
+        }
+        .con5{
+            margin-top: 100px;
+            font-family:华文楷体;
+            font-size: 22px;
+            letter-spacing: 4px;
+            text-indent: 58px;
+            text-align: justify;
+        }
+        #container4{
+            width: 800px;
+            height: 600px;
+            margin: auto;
+        }
+        .pic5{
+            margin-top: 50px;
+        }
+        .con6{
+            margin-top: 100px;
+            font-family:华文楷体;
+            font-size: 22px;
+            letter-spacing: 4px;
+            text-indent: 58px;
+            text-align: justify;
+        }
+        .pic6{
+           /* margin-top: 50px;*/
+            text-align: center;
+        }
+        .con7{
+            margin-top: 100px;
+            font-family:华文楷体;
+            font-size: 22px;
+            letter-spacing: 4px;
+            text-indent: 58px;
+            text-align: justify;
+        }
+        .con8{
+            margin-top: 100px;
+            text-align: center;
+            font-family: 黑体;
+            color:#272727;
+            font-size: 18px;
+            letter-spacing: 8px;
+            background: url("images/bot.png")
+            /*text-align: justify;*/
+        }SSSS
+        .bot{
+            text-align: center;
+        }
+        .con9{
+            margin-top: 0px;
+            font-family:华文楷体;
+            font-size: 22px;
+            letter-spacing: 4px;
+            text-indent: 58px;
+            text-align: justify;
+        }
+        .layui-carousel div img {
+            width: 332px;
+            height: 450px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div style="background: -webkit-linear-gradient(top,#f3f3f3,#f9f9dd );">
+    <div style="width:800px;margin: auto;">
+        <div class="hbg"></div>
+        <div><video width=800px height=600px  autoplay muted><source src="开头.mov"  alt="Second slide" style="width: 100%;"></video></div>
+        <div class="con1">
+            <p class="change">1918年10月，中国第一个新闻学研究团体“北京大学新闻研究会”成立，</p><br>
+            <p class="change">在中国新闻传播学科发展上具有里程碑式的意义。</p><br>
+            <p class="change">栉风沐雨一百年，一百年德业日新，</p><br>
+            <p class="change">新闻传播学已经从单一的新闻学方向</p><br>
+            <p class="change">衍生出网络新媒体、计算传播学、媒介产业管理等诸多新兴方向。</p><br>
+            <p class="change">在万物互联的智能传播时代，站在新纪元的开端展望，</p><br>
+            <p class="change">诸多学科交汇的新闻传播学究竟将何去何从？</p>
         </div>
 
-        <div style="width: 1400px;height: 500px; margin:150px auto;">
-            <div class="h3"><img src="images/校徽图.jpg" style="width: 1000px;height:250px;">
+            <div class="pic1">
+                <div class="layui-carousel" id="test10"><div carousel-item="" ></div></div>
+                <script src="../layui/layui.all.js" charset="utf-8"></script>
+                <script>
+                    var data = [
+                        "images/图片1.png",
+                        "images/图片2.png",
+                        "images/图片3.jpg",
+                        "images/图片4.png",
+                        "images/图片5.png",
+                        "images/图片6.png",
+                        "images/图片7.png",
+                    ];
+                    $(function () {
+                        var carousel;
+                        layui.use(['carousel'], function () {
+                            carousel = layui.carousel;
+                            // carousel.render({
+                            //     elem: '#test10'
+                            //     , width: '400px'
+                            //     , height: '400px'
+                            //     , interval: 5000
+                            // });
+                        })
+                        $.each(data, function (index, value) {
+                            var div = $("<div></div>").append("<img src='" + value + "'>");
+                            $(".layui-carousel>div").append(div)
+                        })
+                        setTimeout(function (){
+                            carousel.render({
+                                elem: '#test10'
+                                , width: '700px'
+                                , height: '400px'
+                                , interval: 2000
+                            });
+                        },100);
+                    })
+                </script>
             </div>
-            <div class="h2 ">一百年风雨兼程，一百年弦歌不辍，新闻传播学的发展离不开前赴后继的教师们上下求索砥砺前行的努力。教师的探索和研究一定程度上决定着学科发展的广度与深度，引领着新闻传播学的走向。因此，教师的教育背景不仅是个人爱好和研究兴趣的缩影，更与新闻传播学的未来发展流向一脉相连。
-                在2018年教育部第四轮学科评估中，24所双一流高校的新闻传播学在c-以上。双一流高校代表着我国高等教育先进水平，对其中15所官网教师个人信息较为齐全的高校教师进行分析，能够一探我国新闻传播学的发展态势。这15所高校涵盖我国东部、西部、南部、北部名校，专职教师560名，具有一定全国代表性。
-            </div>
+
+        <div class="con2">
+            <div class="con9">一百年风雨兼程，一百年弦歌不辍，新闻传播学的发展离不开前赴后继的教师们上下求索砥砺前行的努力。教师的探索和研究一定程度上决定着学科发展的广度与深度，引领着新闻传播学的走向。因此，教师的教育背景不仅是个人爱好和研究兴趣的缩影，更与新闻传播学的未来发展流向一脉相连。</p><br><br>
+            <div class="con9">在2018年教育部第四轮学科评估中，24所双一流高校的新闻传播学在c-以上。双一流高校代表着我国高等教育先进水平，对其中15所官网教师个人信息较为齐全的高校教师进行分析，能够一探我国新闻传播学的发展态势。这15所高校涵盖我国东部、西部、南部、北部名校，专职教师560名，具有一定全国代表性。</p>
         </div>
-        <div class="h5">
-            <div><img src="" alt=""></div>
-            <div id="container1" style="margin: auto"></div>
+        <br><br>
+        <div class="pic2"><img src="images/校徽图.jpg" style="width:800px;height:200px;margin-left: -50px"></div>
+        <div class="con3">15所高校教师就读的专业呈现多元并包之态，始终保有交叉学科的融汇入口。高校教师本科就读专业文理兼备，艺工兼容，涵盖新闻传播、物理、生物、计算机、英语、管理、油画等不同专业。硕博专业在向新闻传播学专业急剧聚拢，在细分领域内深耕细作的同时，依然保有专业多元主义的态势。教师专业背景的多元化为新闻传播学科带来新鲜血液，推动学科交叉发展，不断拓展学科发展边际。</span>
+        </div>
+        <div class="pic3">
+            <div id="container1" style="margin:auto" class="fl"></div>
             <script type="text/javascript">
                 var dom = document.getElementById("container1");
                 var myChart = echarts.init(dom);
@@ -201,7 +221,10 @@
                     title : {
                         text: '高校新闻学院教师本科专业分布',
                         subtext: '数据来源于官网',
-                        x:'center'
+                        x:'center',
+                        textStyle:{
+                            fontSize:14
+                        }
                     },
                     tooltip : {
                         trigger: 'item',
@@ -209,7 +232,7 @@
                     },
 
                     toolbox: {
-                        show : true,
+                        show : false,
                         feature : {
                             mark : {show: true},
                             dataView : {show: true, readOnly: false},
@@ -226,15 +249,15 @@
                         {
                             name:'半径模式',
                             type:'pie',
-                            radius : [30, 150],
-                            center : ['50%', '55%'],
+                            radius : [20, 110],
+                            center : ['45%', '55%'],
                             roseType : 'radius',
                             label: {
                                 normal: {
                                     show: false
                                 },
                                 emphasis: {
-                                    show: true
+                                    show: false
                                 }
                             },
                             lableLine: {
@@ -316,7 +339,10 @@
                     title : {
                         text: '高校新闻学院教师硕士专业分布',
                         subtext: '数据来源于官网',
-                        x:'center'
+                        x:'center',
+                        textStyle:{
+                            fontSize:14
+                        }
                     },
                     tooltip : {
                         trigger: 'item',
@@ -324,7 +350,7 @@
                     },
 
                     toolbox: {
-                        show : true,
+                        show : false,
                         feature : {
                             mark : {show: true},
                             dataView : {show: true, readOnly: false},
@@ -341,15 +367,15 @@
                         {
                             name:'半径模式',
                             type:'pie',
-                            radius : [30, 150],
-                            center : ['50%', '50%'],
+                            radius : [20, 110],
+                            center : ['45%', '55%'],
                             roseType : 'radius',
                             label: {
                                 normal: {
                                     show: false
                                 },
                                 emphasis: {
-                                    show: true
+                                    show: false
                                 }
                             },
                             lableLine: {
@@ -409,7 +435,10 @@
                     title : {
                         text: '高校新闻学院教师博士专业分布',
                         subtext: '数据来源于官网',
-                        x:'center'
+                        x:'center',
+                        textStyle:{
+                            fontSize:14
+                        }
                     },
                     tooltip : {
                         trigger: 'item',
@@ -417,7 +446,7 @@
                     },
 
                     toolbox: {
-                        show : true,
+                        show : false,
                         feature : {
                             mark : {show: true},
                             dataView : {show: true, readOnly: false},
@@ -434,15 +463,15 @@
                         {
                             name:'半径模式',
                             type:'pie',
-                            radius : [30, 150],
-                            center : ['50%', '50%'],
+                            radius : [20, 110],
+                            center : ['45%', '55%'],
                             roseType : 'radius',
                             label: {
                                 normal: {
                                     show: false
                                 },
                                 emphasis: {
-                                    show: true
+                                    show: false
                                 }
                             },
                             lableLine: {
@@ -480,14 +509,14 @@
                     myChart.setOption(option, true);
                 }
             </script>
-
-            <div style="text-align: center" ><img src="images/老师专业.jpg" style="width: 1000px;height: 650px"></div>
-
-            <div style="width: 1400px;height: 500px;margin:100px auto">
-                <span>15所高校教师就读的专业呈现多元并包之态，始终保有交叉学科的融汇入口。高校教师本科就读专业文理兼备，艺工兼容，涵盖新闻传播、物理、生物、计算机、英语、管理、油画等不同专业。硕博专业在向新闻传播学专业急剧聚拢，在细分领域内深耕细作的同时，依然保有专业多元主义的态势。教师专业背景的多元化为新闻传播学科带来新鲜血液，推动学科交叉发展，不断拓展学科发展边际。</span>
-            </div>
         </div>
-        <div class="h4">
+
+        <div class="con4">教师们就读专业的多元化，从七位新闻传播学知名教师的教育背景中可见一斑，涵盖三种类型：始终在新闻传播领域研精覃思；本身具有跨学科学习经历，即硕博期间由其他专业学科转向新闻传播学；始终在其他专业学科求学深造，助推学科交叉发展。
+        </div>
+        <div class="pic4"><img src="images/老师专业.jpg" style="width: 700px;height: 460px"></div>
+        <div class="con5">从教师就读地来看，大城市聚拢作用明显，留学趋势凸显。北京高校林立，中国人民大学、中国传媒大学、北京大学、清华大学等名校集中于此，北京作为我国的政治中心，传媒行业繁盛，北京成为老师们求学的首选地。湖北、上海等地得益于武汉大学、复旦大学等老牌传媒名校，同样聚集大批学子。港澳台及海外地区新闻传播学科发展较为成熟领先，与学界研究最前沿接轨，带来知识思维的碰撞与交融，成为老师们攻读硕士和博士学位的心仪之地。</span>
+        </div>
+        <div class="pic5">
             <div id="container4"></div>
             <script type="text/javascript">
                 var dom = document.getElementById("container4");
@@ -562,8 +591,8 @@
                         },
                         calculable : true,
                         grid: {
-                            top: 80,
-                            bottom: 100,
+                            top: 120,
+                            bottom: 120,
                             tooltip: {
                                 trigger: 'axis',
                                 axisPointer: {
@@ -606,7 +635,11 @@
                     },
                     options: [
                         {
-                            title: {text: '高校新闻学院教师本科所在地分布'},
+                            title: {
+                                text: '高校新闻学院教师本科所在地分布',
+                                left:'center'
+
+                            },
                             series: [
                                 {data: dataMap.data['本科'],
                                     itemStyle:{
@@ -619,7 +652,11 @@
                             ]
                         },
                         {
-                            title : {text: '高校新闻学院教师硕士所在地分布'},
+                            title : {
+                                text: '高校新闻学院教师硕士所在地分布',
+                                left:'center'
+
+                            },
                             series : [
                                 {data: dataMap.data['硕士'],
                                     itemStyle:{
@@ -631,19 +668,27 @@
                             ]
                         },
                         {
-                            title : {text: '高校新闻学院教师博士所在地分布'},
+                            title : {
+                                text:'高校新闻学院教师博士所在地分布',
+                                left:'center'
+
+                            },
                             series : [
                                 {data: dataMap.data['博士'],
                                     itemStyle:{
                                         normal:{
-                                            color : '#993366',
+                                            color  : '#993366',
                                         }
                                     }
                                 },
                             ]
                         },
                         {
-                            title : {text: '高校新闻学院教师工作所在地分布'},
+                            title : {
+                                text: '高校新闻学院教师工作所在地分布',
+                                left:'center'
+
+                            },
                             series : [
                                 {data: dataMap.data['工作'],
                                     itemStyle:{
@@ -654,36 +699,26 @@
                                 },
                             ]
                         }
-                    ]
-                };;
+                    ]};
+                ;
                 if (option && typeof option === "object") {
                     myChart.setOption(option, true);
                 }
             </script>
-            <div class="h2">
-                <span>从教师就读地来看，大城市聚拢作用明显，留学趋势凸显。北京高校林立，中国人民大学、中国传媒大学、北京大学、清华大学等名校集中于此，北京作为我国的政治中心，传媒行业繁盛，北京成为老师们求学的首选地。湖北、上海等地得益于武汉大学、复旦大学等老牌传媒名校，同样聚集大批学子。港澳台及海外地区新闻传播学科发展较为成熟领先，与学界研究最前沿接轨，带来知识思维的碰撞与交融，成为老师们攻读硕士和博士学位的心仪之地。</span>
-            </div>
         </div>
-
-        <div class="TitleAndGender">
-            <div style="text-align: center">
-                <img src="images/性别职称.png" style="width: 1000px;height: 400px;">
-            </div>
-            <div style="width: 1400px; height:130px;" class="h2">
-                <span>从明确已知性别和职称的543名教师中，教授级别230人，副教授级别207人，讲师级别106人，比例约为4：4：2，教授与副教授是如今新闻传播学科教学主力。其中，教授中男性占比70.4%，女性仅为29.6%；副教授和讲师中男女更为均衡，基本约为1：1。</span>
-            </div>
+        <div class="con6">从明确已知性别和职称的543名教师中，教授级别230人，副教授级别207人，讲师级别106人，比例约为4：4：2，教授与副教授是如今新闻传播学科教学主力。其中，教授中男性占比70.4%，女性仅为29.6%；副教授和讲师中男女更为均衡，基本约为1：1。</span>
         </div>
+        <div class="pic6"><img src="images/性别职称.png" style="width: 800px;height: 470px;"></div>
+        <div class="con7">教师教育背景专业多元化，交叉学科人才众多，在新闻传播学与其他学科的交叉碰撞中涌现更多的火花与灵感。具有国际视野，港澳台及海外地区学习或访学经历的老师占比45.2%，推动我国新闻传播学向国际化迈开更大步伐。无论是VR和AR的应用，还是机器写作和算法推荐，无论是质化思辨，还是量化考证，对于新闻传播学而言无疑都是一点一滴的进步。学科交叉融合、中国特色、与国际接轨成为如今新闻传播学的标签，新闻传播学未来究竟走向哪里，还有待时间来证明。</span></div>
+    </div>
 
-        <div class="h2"style="width: 1400px;height: 200px;margin:auto;border-radius: 8px"><span>教师教育背景专业多元化，交叉学科人才众多，在新闻传播学与其他学科的交叉碰撞中涌现更多的火花与灵感。具有国际视野，港澳台及海外地区学习或访学经历的老师占比45.2%，推动我国新闻传播学向国际化迈开更大步伐。无论是VR和AR的应用，还是机器写作和算法推荐，无论是质化思辨，还是量化考证，对于新闻传播学而言无疑都是一点一滴的进步。学科交叉融合、中国特色、与国际接轨成为如今新闻传播学的标签，新闻传播学未来究竟走向哪里，还有待时间来证明。</span></div>
-        <div style="height:400px;margin-top: -150px">
-
-                <div style="width: 1400px;height: 500px;margin:auto;border-radius: 8px;text-align: center;font-family: 黑体;color:#272727;font-size: 20px; letter-spacing: 8px" class="bgbo">
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><span>北京师范大学新闻传播学院传播学专业</span><br>
-                    <span>杨梓倓&nbsp石韦颖&nbsp季晓旭</span><br>
-                   <span>数据来源：各学校和学院官网、公开数据整理</span>
-                </div>
-
-        </div>
-        </div>
-    </body>
+    <div class="con8"><br><br><br>北京师范大学新闻传播学院传播学专业</span><br>
+        <span>杨梓倓&nbsp石韦颖&nbsp季晓旭</span><br>
+        <span>数据来源：各学校和学院官网、公开数据整理</span>
+    </div>
+    <div class="bot"><img src="images/bot.png" alt="" style="width: 800px;height: 500px;margin-top: -350px;margin-left: -50px"></div>
+</div>
+</div>
+</div>
+</body>
 </html>
